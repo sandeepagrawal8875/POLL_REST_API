@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Poll(models.Model):
     """creating question in polls"""
     question = models.CharField(max_length=200)
-    create_by = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    created_by = models.ForeignKey(to=User, on_delete=models.CASCADE)
     pub_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
